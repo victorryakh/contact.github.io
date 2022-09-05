@@ -37,18 +37,19 @@
                 height: 100%;
             }
             .card {
-                max-width: calc(100% - 30px);
-                max-height: calc(100% - 30px);
+                max-width: calc(100% - 20px);
+                max-height: calc(100% - 20px);
                 background: var(--color-background);
                 box-shadow: 5px 5px 10px var(--color-background-shadow), -5px -5px 10px var(--color-background-light);
                 padding: 30px;
-                margin: 30px;
+                margin: 20px;
                 border-radius: 30px;
+                text-align: center;
             }
             .avatar {
                 display: block;
                 border-radius: 100%;
-                width: 8em;
+                width: 8rem;
                 margin: auto;
                 filter: grayscale(0.25);
             }
@@ -66,7 +67,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", _ => {
                 if (navigator.language.startsWith("en")) {
-                    document.title = "Victor Ryakhovskiy — Contacts";
+                    document.title                                = "Victor Ryakhovskiy — Contacts";
                     document.getElementById("fullname").innerText = "Victor Ryakhovskiy";
                 }
             });
@@ -74,7 +75,10 @@
     </head>
     <body>
         <div class="card">
-            <img class="avatar" src="avatar.jpg" alt="My photo"/>
+            ​<picture>
+                <source srcset="avatar.avif" type="image/avif"/>
+                <img class="avatar" src="avatar.jpg" alt="My photo"/>
+            </picture>
             <h1 id="fullname">Виктор Ряховский</h1>
             <div class="content">
                 <a class="link" href="https://t.me/victorryakh" target="_blank">Telegram</a>
