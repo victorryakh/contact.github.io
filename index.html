@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Виктор Ряховский ­— Контакты</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            @media (prefers-color-scheme: light) {
+                :root {
+                    --color-background-l: 90%;
+                    --color-text-l: 10%;
+                }
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --color-background-l: 5%;
+                    --color-text-l: 95%;
+                }
+            }
+            :root {
+                font-family: sans-serif;
+                --color-background: hsl(0, 0%, var(--color-background-l));
+                --color-background-light: hsl(0, 0%, calc(var(--color-background-l) + 5%));
+                --color-background-shadow: hsl(0, 0%, calc(var(--color-background-l) - 5%));
+                --color-text: hsl(0, 0%, var(--color-text-l));
+            }
+            html {
+                background: var(--color-background);
+                color: var(--color-text);
+                height: 100%;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                height: 100%;
+            }
+            .card {
+                max-width: 100vw;
+                max-height: 100vh;
+                background: var(--color-background);
+                box-shadow: inset 5px 5px 10px var(--color-background-shadow), inset -5px -5px 10px var(--color-background-light);
+                padding: 30px;
+                border-radius: 30px;
+            }
+            .avatar {
+                display: block;
+                border-radius: 100%;
+                width: 8em;
+                margin: auto;
+                filter: grayscale(0.25);
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .link {
+                display: block;
+                color: green;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img class="avatar" src="avatar.jpg" alt="My photo"/>
+            <h1 class="fullname">Виктор Ряховский</h1>
+            <div class="content">
+                <a class="link" href="https://t.me/victorryakh" target="_blank">Telegram</a>
+                <a class="link" href="https://vk.com/victorryakh" target="_blank">VK</a>
+                <a class="link" href="https://instagram.com/victorryakh" target="_blank">Instagram</a>
+                <a class="link" href="https://open.spotify.com/user/ticr33cm3sq2lckf8vqm9qany" target="_blank">Spotify</a>
+            </div>
+        </div>
+    </body>
+</html>
